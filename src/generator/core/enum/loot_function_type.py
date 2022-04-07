@@ -1,0 +1,28 @@
+from enum import Enum
+
+
+class LootFunctionType(Enum):
+    APPLY_BONUS = 'minecraft:apply_bonus'
+    COPY_NAME = 'minecraft:copy_name'
+    COPY_NBT = 'minecraft:copy_nbt'
+    COPY_STATE = 'minecraft:copy_state'
+    ENCHANT_RANDOMLY = 'minecraft:enchant_randomly'
+    ENCHANT_WITH_LEVELS = 'minecraft:enchant_with_levels'
+    EXPLORATION_MAP = 'minecraft:exploration_map'
+    EXPLOSION_DECAY = 'minecraft:explosion_decay'
+    FILL_PLAYER_HEAD = 'minecraft:fill_player_head'
+    FURNACE_SMELT = 'minecraft:furnace_smelt'
+    LIMIT_COUNT = 'minecraft:limit_count'
+    LOOTING_ENCHANT = 'minecraft:looting_enchant'
+    SET_ATTRIBUTES = 'minecraft:set_attributes'
+    SET_BANNER_PATTERN = 'minecraft:set_banner_pattern'
+    SET_CONTENTS = 'minecraft:set_contents'
+    SET_COUNT = 'minecraft:set_count'
+    SET_DAMAGE = 'minecraft:set_damage'
+    SET_ENCHANTMENTS = 'minecraft:set_enchantments'
+    SET_LOOT_TABLE = 'minecraft:set_loot_table'
+    SET_LORE = 'minecraft:set_lore'
+    SET_NAME = 'minecraft:set_name'
+    SET_NBT = 'minecraft:set_nbt'
+    SET_POTION = 'minecraft:set_potion'
+    SET_STEW_EFFECT = 'minecraft:set_stew_effect'

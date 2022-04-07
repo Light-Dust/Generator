@@ -1,0 +1,37 @@
+- [x] [SNBT](https://wiki.biligame.com/mc/NBT%E6%A0%BC%E5%BC%8F#%E6%A0%87%E7%AD%BE%E7%9A%84%E5%AE%9A%E4%B9%89)
+- [x] 原版枚举
+- [ ] [物品结构](https://wiki.biligame.com/mc/Player.dat%E6%A0%BC%E5%BC%8F#%E7%89%A9%E5%93%81%E7%BB%93%E6%9E%84)
+  - [x] 物品共通标签
+  - [ ] 通用标签
+  - [ ] 方块标签
+  - [ ] 附魔
+  - [ ] 属性修饰符
+  - [ ] 药水效果
+  - [ ] 弩
+  - [ ] 显示属性
+  - [ ] 成书
+  - [ ] 玩家的头颅
+  - [ ] 烟火之星
+  - [ ] 烟花火箭
+  - [ ] 盔甲架和刷怪蛋
+  - [ ] 鱼桶
+  - [ ] 地图
+  - [ ] 迷之炖菜
+  - [ ] 调试棒
+  - [ ] 指南针
+  - [ ] 收纳袋
+- [ ] 实体共通标签
+- [ ] [原始JSON文本](https://wiki.biligame.com/mc/%E5%8E%9F%E5%A7%8BJSON%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F)
+- [ ] [战利品表谓词](https://wiki.biligame.com/mc/%E6%88%98%E5%88%A9%E5%93%81%E8%A1%A8%E8%B0%93%E8%AF%8D)
+- [ ] [物品修饰器](https://wiki.biligame.com/mc/%E7%89%A9%E5%93%81%E4%BF%AE%E9%A5%B0%E5%99%A8)
+- [ ] [战利品表](https://wiki.biligame.com/mc/%E6%88%98%E5%88%A9%E5%93%81%E8%A1%A8)
+- [ ] [进度](https://wiki.biligame.com/mc/%E8%BF%9B%E5%BA%A6/JSON%E6%A0%BC%E5%BC%8F)
+- [ ] [配方](https://wiki.biligame.com/mc/%E9%85%8D%E6%96%B9)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
+- [ ] [...](TODO.md)
