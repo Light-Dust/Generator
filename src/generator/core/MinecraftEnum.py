@@ -2767,6 +2767,16 @@ class StatusEvent(enum):
     WITHER = 'minecraft:wither'
 
 
+class RecipeType(enum):
+    BLASTING = 'minecraft:blasting'
+    CAMPFIRE_COOKING = 'minecraft:campfire_cooking'
+    CRAFTING = 'minecraft:crafting'
+    SMELTING = 'minecraft:smelting'
+    SMITHING = 'minecraft:smithing'
+    SMOKING = 'minecraft:smoking'
+    STONECUTTING = 'minecraft:stonecutting'
+
+
 class Block(enum):
     ACACIA_BUTTON = 'minecraft:acacia_button'
     ACACIA_DOOR = 'minecraft:acacia_door'
