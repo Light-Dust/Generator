@@ -3,8 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/generator/core/Block.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/generator/core/Item.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generator/core/Logger.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generator/core/NBT/NBTType.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log/1609430400.log" charset="GBK" />
     <file url="file://$PROJECT_DIR$/log/laste.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test.py" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
