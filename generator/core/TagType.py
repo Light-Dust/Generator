@@ -143,7 +143,7 @@ class TAG_List(TAG):
 class TAG_Compound(TAG):
     __value__: list[TAG] = []
 
-    def __init__(self, key: str, value: list[TAG]):
+    def __init__(self, key: str, value: list[TAG] = None):
         super().__init__(key)
         self.__value__ = value
 
