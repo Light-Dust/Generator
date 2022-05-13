@@ -1,6 +1,11 @@
 from utils.enum import enum
 
 
+class LootScoreProviderType(enum):
+    CONTEXT = 'minecraft:context'
+    FIXED = 'minecraft:fixed'
+
+
 class BlockEntityType(enum):
     BANNER = 'minecraft:banner'
     BARREL = 'minecraft:barrel'
@@ -65,6 +70,11 @@ class PaintingMotive(enum):
     WANDERER = 'minecraft:wanderer'
     WASTELAND = 'minecraft:wasteland'
     WITHER = 'minecraft:wither'
+
+
+class LootNbtProviderType(enum):
+    CONTEXT = 'minecraft:context'
+    STORAGE = 'minecraft:storage'
 
 
 class Potion(enum):
@@ -205,6 +215,17 @@ class Attribute(enum):
     GENERIC_MOVEMENT_SPEED = 'minecraft:generic.movement_speed'
     HORSE_JUMP_STRENGTH = 'minecraft:horse.jump_strength'
     ZOMBIE_SPAWN_REINFORCEMENTS = 'minecraft:zombie.spawn_reinforcements'
+
+
+class LootPoolEntryType(enum):
+    ALTERNATIVES = 'minecraft:alternatives'
+    DYNAMIC = 'minecraft:dynamic'
+    EMPTY = 'minecraft:empty'
+    GROUP = 'minecraft:group'
+    ITEM = 'minecraft:item'
+    LOOT_TABLE = 'minecraft:loot_table'
+    SEQUENCE = 'minecraft:sequence'
+    TAG = 'minecraft:tag'
 
 
 class Fluid(enum):
@@ -2732,6 +2753,26 @@ class SoundEvent(enum):
     WEATHER_RAIN_ABOVE = 'minecraft:weather.rain.above'
 
 
+class LootConditionType(enum):
+    ALTERNATIVE = 'minecraft:alternative'
+    BLOCK_STATE_PROPERTY = 'minecraft:block_state_property'
+    DAMAGE_SOURCE_PROPERTIES = 'minecraft:damage_source_properties'
+    ENTITY_PROPERTIES = 'minecraft:entity_properties'
+    ENTITY_SCORES = 'minecraft:entity_scores'
+    INVERTED = 'minecraft:inverted'
+    KILLED_BY_PLAYER = 'minecraft:killed_by_player'
+    LOCATION_CHECK = 'minecraft:location_check'
+    MATCH_TOOL = 'minecraft:match_tool'
+    RANDOM_CHANCE = 'minecraft:random_chance'
+    RANDOM_CHANCE_WITH_LOOTING = 'minecraft:random_chance_with_looting'
+    REFERENCE = 'minecraft:reference'
+    SURVIVES_EXPLOSION = 'minecraft:survives_explosion'
+    TABLE_BONUS = 'minecraft:table_bonus'
+    TIME_CHECK = 'minecraft:time_check'
+    VALUE_CHECK = 'minecraft:value_check'
+    WEATHER_CHECK = 'minecraft:weather_check'
+
+
 class StatusEvent(enum):
     ABSORPTION = 'minecraft:absorption'
     BAD_OMEN = 'minecraft:bad_omen'
@@ -2765,6 +2806,33 @@ class StatusEvent(enum):
     WATER_BREATHING = 'minecraft:water_breathing'
     WEAKNESS = 'minecraft:weakness'
     WITHER = 'minecraft:wither'
+
+
+class LootFunctionType(enum):
+    APPLY_BONUS = 'minecraft:apply_bonus'
+    COPY_NAME = 'minecraft:copy_name'
+    COPY_NBT = 'minecraft:copy_nbt'
+    COPY_STATE = 'minecraft:copy_state'
+    ENCHANT_RANDOMLY = 'minecraft:enchant_randomly'
+    ENCHANT_WITH_LEVELS = 'minecraft:enchant_with_levels'
+    EXPLORATION_MAP = 'minecraft:exploration_map'
+    EXPLOSION_DECAY = 'minecraft:explosion_decay'
+    FILL_PLAYER_HEAD = 'minecraft:fill_player_head'
+    FURNACE_SMELT = 'minecraft:furnace_smelt'
+    LIMIT_COUNT = 'minecraft:limit_count'
+    LOOTING_ENCHANT = 'minecraft:looting_enchant'
+    SET_ATTRIBUTES = 'minecraft:set_attributes'
+    SET_BANNER_PATTERN = 'minecraft:set_banner_pattern'
+    SET_CONTENTS = 'minecraft:set_contents'
+    SET_COUNT = 'minecraft:set_count'
+    SET_DAMAGE = 'minecraft:set_damage'
+    SET_ENCHANTMENTS = 'minecraft:set_enchantments'
+    SET_LOOT_TABLE = 'minecraft:set_loot_table'
+    SET_LORE = 'minecraft:set_lore'
+    SET_NAME = 'minecraft:set_name'
+    SET_NBT = 'minecraft:set_nbt'
+    SET_POTION = 'minecraft:set_potion'
+    SET_STEW_EFFECT = 'minecraft:set_stew_effect'
 
 
 class RecipeType(enum):
@@ -3733,3 +3801,10 @@ class Enchantment(enum):
     THORNS = 'minecraft:thorns'
     UNBREAKING = 'minecraft:unbreaking'
     VANISHING_CURSE = 'minecraft:vanishing_curse'
+
+
+class LootNumberProviderType(enum):
+    BINOMIAL = 'minecraft:binomial'
+    CONSTANT = 'minecraft:constant'
+    SCORE = 'minecraft:score'
+    UNIFORM = 'minecraft:uniform'
