@@ -1,4 +1,5 @@
 from TagType import TAG, TAG_Int, TAG_String, TAG_Compound
+from MinecraftEnum import Item
 
 
 class ItemTag:
@@ -6,7 +7,7 @@ class ItemTag:
     itemId: TAG_String
     tag: TAG_Compound
 
-    def __init__(self, count: int, itemId: str, tag: list[TAG]):
+    def __init__(self, count: int, itemId: Item, tag: list[TAG]):
         self.count = TAG_Int('count', count)
         self.itemId = TAG_String('id', itemId)
         self.tag = TAG_Compound('tag', tag)
