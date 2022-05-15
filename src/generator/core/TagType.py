@@ -132,10 +132,30 @@ class TAG_List(TAG):
         super().__init__(key)
         self.__value__ = value
 
+    def append(self, value):
+        self.__value__.append(value)
+
+    def remove(self, pos: int):
+        self.__value__.remove(self.__value__[pos])
+
+    def __index__(self, value):
+        return self.__value__.index(value)
+
+    def __count__(self, value):
+        return self.__count__(value)
+
+    def change(self, pos: int, value):
+        self.__value__[pos] = value
+
+    def replace(self, value1, value2):
+        for i in range(self.__value__.count(value1)):
+            self.__value__.remove(value1)
+            self.__value__.append(value2)
+
     def __str__(self) -> str:
         x: str = f'{self.__name__}: ['
         for i in self.__value__:
-            x = x + f'{i}, '
+            x = x + f'{str(i)}, '
         x = x[:-2] + ']'
         return x
 
