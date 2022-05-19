@@ -1,4 +1,4 @@
-from src.generator.core.Logger import LOGGER
+from src.generator.core.Handle import LOGGER
 
 
 class TAG:

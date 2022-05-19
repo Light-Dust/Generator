@@ -1,5 +1,6 @@
 from TagType import *
 from MinecraftEnum import Item, EntityType
+from src.generator.core.Handle import randomUUID
 
 
 class ItemTag:
@@ -7,13 +8,17 @@ class ItemTag:
     itemId: TAG_String
     tag: TAG_Compound
 
-    def __init__(self, count: int, itemId: Item, tag: list[TAG]):
+    def __init__(self, itemId: Item, count: int = 1, tag: list[TAG] = None):
         self.count = TAG_Int('count', count)
         self.itemId = TAG_String('id', itemId)
         self.tag = TAG_Compound('tag', tag)
 
     def __str__(self) -> str:
         return f'{{{self.count}, {self.itemId}, {self.tag}}}'
+
+
+class EntityTag:
+    pass
 
 
 class EntityTag:
@@ -37,8 +42,45 @@ class EntityTag:
     tags: TAG_List
     uuid: TAG_Int_Array
 
-    def __init__(self, entityId: EntityType):
+    def __init__(self,
+                 entityId: EntityType,
+                 air: int = 300,
+                 customName: str = None,
+                 customNameVisible: int = 0,
+                 fallDistance: float = 0.0,
+                 fire: int = 0,
+                 glowing: int = 0,
+                 hasVisualFire: int = 0,
+                 invulnerable: int = 0,
+                 motion: list[TAG_Double] = [0.0, 0.0, 0.0],
+                 noGravity: int = 0,
+                 onGround: int = 0,
+                 passengers: list[EntityTag] = None,
+                 portalCooldown: int = 0,
+                 pos: list[TAG_Double] = [0.0, 0.0, 0.0],
+                 rotation: list[TAG_Float] = [0.0, 0.0],
+                 silent: int = 1,
+                 tags: list[TAG_String] = None,
+                 uuid: list[int] = randomUUID()):
         self.entityId = TAG_String('id', entityId)
+        self.air = TAG_Short('Air', air)
+        self.customName = TAG_String('CustomName', customName)
+        self.customNameVisible = TAG_Byte('CustomNameVisible', customNameVisible)
+        self.fallDistance = TAG_Float('FallDistance', fallDistance)
+        self.fire = TAG_Short('Fire', fire)
+        self.glowing = TAG_Byte('Glowing', glowing)
+        self.hasVisualFire = TAG_Byte('HasVisualFire', hasVisualFire)
+        self.invulnerable = TAG_Byte('Invulnerable', invulnerable)
+        self.motion = TAG_List('Motion', motion)
+        self.noGravity = TAG_Byte('NoGravity', noGravity)
+        self.onGround = TAG_Byte('OnGround', onGround)
+        self.passengers = TAG_List('Passengers', passengers)
+        self.portalCooldown = TAG_Int('PortalCooldown', portalCooldown)
+        self.pos = TAG_List('Pos', pos)
+        self.rotation = TAG_List('Rotation', rotation)
+        self.silent = TAG_Byte('Silent', silent)
+        self.tags = TAG_List('Tags', tags)
+        self.uuid = TAG_Int_Array('UUID', uuid)
 
     def __str__(self) -> str:
         ...
