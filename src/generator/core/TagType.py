@@ -1,4 +1,4 @@
-from src.generator.core.Handle import LOGGER
+from .Handle import LOGGER
 
 
 class TAG:
@@ -27,7 +27,7 @@ class TAG_Byte(TAG):
             LOGGER.error('Byte的范围为-128~127')
 
     def __str__(self) -> str:
-        return f'{self.__name__}: {str(self.__value__)}'
+        return f'{self.__name__}: {str(self.__value__)}b'
 
 
 class TAG_Short(TAG):
@@ -41,7 +41,7 @@ class TAG_Short(TAG):
             LOGGER.error('Short的范围为-32768~32767')
 
     def __str__(self) -> str:
-        return f'{self.__name__}: {str(self.__value__)}'
+        return f'{self.__name__}: {str(self.__value__)}s'
 
 
 class TAG_Int(TAG):
@@ -69,7 +69,7 @@ class TAG_Long(TAG):
             LOGGER.error('Long的范围为-9223372036854775808~9223372036854775807')
 
     def __str__(self) -> str:
-        return f'{self.__name__}: {str(self.__value__)}'
+        return f'{self.__name__}: {str(self.__value__)}l'
 
 
 class TAG_Float(TAG):
@@ -122,7 +122,10 @@ class TAG_String(TAG):
         self.__value__ = value
 
     def __str__(self) -> str:
-        return f'{self.__name__}: "{str(self.__value__)}"'
+        if self.__value__ is not None:
+            return f'{self.__name__}: "{str(self.__value__)}"'
+        else:
+            return f'{self.__name__}: ""'
 
 
 class TAG_List(TAG):
@@ -154,9 +157,16 @@ class TAG_List(TAG):
 
     def __str__(self) -> str:
         x: str = f'{self.__name__}: ['
-        for i in self.__value__:
-            x = x + f'{str(i)}, '
-        x = x[:-2] + ']'
+
+        if self.__value__ is not None:
+            for i in self.__value__:
+                if type(i) == str:
+                    x = x + f'"{str(i)}", '
+                else:
+                    x = x + f'{str(i)}, '
+            x = x[:-2] + ']'
+        else:
+            x = x + ']'
         return x
 
 

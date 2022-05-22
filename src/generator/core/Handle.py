@@ -1,12 +1,12 @@
 import logging
-from random import random
+from random import randint
 
 LOGGER = logging.Logger("generator")
 
 
 def randomUUID() -> list[int]:
-    a = int(random() * 100000000000000000) % (2 ** 32)
-    b = int(random() * 100000000000000000) % (2 ** 32)
-    c = int(random() * 100000000000000000) % (2 ** 32)
-    d = int(random() * 100000000000000000) % (2 ** 32)
+    a = randint(-2 ** 31, 2 ** 31-1)
+    b = randint(-2 ** 31, 2 ** 31-1)
+    c = randint(-2 ** 31, 2 ** 31-1)
+    d = randint(-2 ** 31, 2 ** 31-1)
     return [a, b, c, d]

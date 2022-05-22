@@ -1,6 +1,6 @@
-from TagType import *
-from MinecraftEnum import Item, EntityType
-from src.generator.core.Handle import randomUUID
+from .TagType import *
+from .enum import Item, EntityType
+from .Handle import randomUUID
 
 
 class ItemTag:
@@ -52,17 +52,17 @@ class EntityTag:
                  glowing: int = 0,
                  hasVisualFire: int = 0,
                  invulnerable: int = 0,
-                 motion: list[TAG_Double] = [0.0, 0.0, 0.0],
+                 motion: list[float] = [0.0, 0.0, 0.0],
                  noGravity: int = 0,
                  onGround: int = 0,
                  passengers: list[EntityTag] = None,
                  portalCooldown: int = 0,
-                 pos: list[TAG_Double] = [0.0, 0.0, 0.0],
-                 rotation: list[TAG_Float] = [0.0, 0.0],
+                 pos: list[float] = [0.0, 0.0, 0.0],
+                 rotation: list[float] = [0.0, 0.0],
                  silent: int = 1,
-                 tags: list[TAG_String] = None,
+                 tags: list[str] = None,
                  uuid: list[int] = randomUUID()):
-        self.entityId = TAG_String('id', entityId)
+        self.entityId = TAG_String('id', entityId.value)
         self.air = TAG_Short('Air', air)
         self.customName = TAG_String('CustomName', customName)
         self.customNameVisible = TAG_Byte('CustomNameVisible', customNameVisible)
@@ -83,4 +83,28 @@ class EntityTag:
         self.uuid = TAG_Int_Array('UUID', uuid)
 
     def __str__(self) -> str:
-        ...
+        s = f'{{{str(self.entityId)}}}'
+
+        def append(x: TAG, a: str):
+            a = a[:-1] + ', ' + str(x) + a[-1]
+            return a
+
+        s = append(self.air, s)
+        s = append(self.customName, s)
+        s = append(self.customNameVisible, s)
+        s = append(self.fallDistance, s)
+        s = append(self.fire, s)
+        s = append(self.glowing, s)
+        s = append(self.hasVisualFire, s)
+        s = append(self.invulnerable, s)
+        s = append(self.motion, s)
+        s = append(self.noGravity, s)
+        s = append(self.onGround, s)
+        s = append(self.passengers, s)
+        s = append(self.portalCooldown, s)
+        s = append(self.pos, s)
+        s = append(self.rotation, s)
+        s = append(self.silent, s)
+        s = append(self.tags, s)
+        s = append(self.uuid, s)
+        return s

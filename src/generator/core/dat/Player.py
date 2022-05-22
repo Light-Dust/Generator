@@ -1,4 +1,4 @@
-from src.generator.core.TagType import *
+from generator.core.TagType import *
 
 
 class ItemTag(list[TAG]):
